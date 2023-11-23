@@ -19,6 +19,4 @@ tScaled = t/7;
 y = [tScaled * cos(tScaled), tScaled * sin(tScaled)];
 ydot = [tScaled * sin(tScaled), tScaled * -cos(tScaled)];
 
-
-
 end
