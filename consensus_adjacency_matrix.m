@@ -9,9 +9,20 @@ y: n by 2 array holding output data for all agents
 --- Outputs ---
 A:  n by n adjacency matrix - see notes for details on construction
 %}
+n = 5;
 A = zeros(n, n);
-
-for i = 0:1:n 
-    A()
-
+i = 1;
+while i <= n
+    if mod(i-1, n) == 0
+        A(i, n) = 1;
+    else 
+        A(i, i-1) = 1;
+    end
+    if mod(i+1, n) == 0
+        A(i, n) = 1;
+    else 
+        A(i, mod(i+1, n)) = 1;
+    end
+    i = i + 1;
+end
 end
